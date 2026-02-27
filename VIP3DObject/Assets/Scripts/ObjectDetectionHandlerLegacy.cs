@@ -55,8 +55,10 @@ public class ObjectDetectionHandlerLegacy : MonoBehaviour
     public GameObject switchCanvas;
     public Dictionary<string, string> blockInfo = new Dictionary<string, string>();
     public Dictionary<string, string> blockName = new Dictionary<string, string>();
-    public RawImage rawImage;
-    public Texture texture;
+    public RawImage blockImageholder;
+    public Texture blockImage;
+    public RawImage placementHolder;
+    public Texture placementImage;
 
     private ObserverBehaviour observerBehaviour;
 
@@ -108,13 +110,9 @@ public class ObjectDetectionHandlerLegacy : MonoBehaviour
         blockName["AT159"] = "AT159";
 
         //Combine 091 and 051
-        blockInfo["AT091"] = "<b>Description:</b> Right side of the door lintel of the entrance to the cella. It continues the three-fasciate door frame at the top, which is crowned by a lintel, framed by a scroll in either end.\n\n" +
-            "<b>Placement:</b> It was found in the northwest quadrant along with the other corner of the lintel.";
-        blockName["AT091"] = "AT091";
-
-        blockInfo["AT051"] = "<b>Description:</b> Left side of the door lintel of the entrance to the cella. It continues the three-fasciate door frame at the top, which is crowned by a lintel, framed by a scroll in either end.\n\n" +
-            "<b>Placement:</b> It was found in the northwest quadrant along with the other corner of the lintel.";
-        blockName["AT051"] = "AT051";
+        blockInfo["AT051+091"] = "<b>Description:</b> Combination of two door lintels, left and right respecitvely. AT051 is the left side of the door lintel of the entrance to the cella. AT091 is the right side of the door lintel of the entrance to the cella. Both continue the three-fasciate door frame at the top, which is crowned by a lintel, framed by a scroll in either end.\n\n" +
+            "<b>Placement:</b> AT051 and AT091 were found in the northwest quadrant along with each other corner of the lintel.";
+        blockName["AT051+091"] = "AT051091";
         //Combine 091 and 051
 
         blockInfo["AT188"] = "<b>Description:</b> \n\n" + "<b>Placement:</b> ";
@@ -123,6 +121,23 @@ public class ObjectDetectionHandlerLegacy : MonoBehaviour
         blockInfo["AT421"] = "<b>Description:</b> This is a corner block of the architrave. It includes three fasciae of increasing height crowned by a simple ovolo and cavetto. It's short length shows that it could not have spanned the opening between columns, and has to be restored in the cella, over the wall blocks. \n\n" +
             "<b>Placement:</b> It was found at the northeast of the temple, and it is restored at the rear left corner of temple.";
         blockName["AT421"] = "AT421";
+
+        blockInfo["AT067"] = "<b>Description:</b> This block has the typical design of the Attic Ionic column base with the scotia-torus-scotia sequence. It's role is to provide a decorative transition between the vertical element of the column and the horizontal plane of the stylobate.\n\n" +
+            "<b>Placement:</b> This base was the one found farthest away from the left side of the temple, and thus it is restored as the leftmost column base.";
+        blockName["AT067"] = "AT067";
+
+        blockInfo["AT119"] = "<b>Description:</b> Pediment with wall block carved together in one piece. This is of smaller scale than the temple itself and thus it is identified as a pediment of an aedicula in the interior of the temple, likely to frame the statue of the temple. It bears a geison molding and a sculptural floral relief in the underside, which gives the minimum depth of the aedicula. " + "<b>Placement:</b> It was found in the northeast quadrant.";
+        blockName["AT119"] = "AT119";
+
+        blockInfo["AT194"] = "<b>Description:</b> This is the fully intact right corner geison block from the front façade. It preserves the raking profile of a geison drip surmounted (from bottom to top) by fascia, ovolo, fascia, ovolo, and cyma recta. The underside of the drip is decorated with alternating modillions and carved cassettes with floral motifs. Cassettes in other geison blocks also include figures, such as marine animals, tools, and spirals. The structural function of this block is to bear cuttings to support the rafters of the roof." + "<b>Placement:</b> Retrieving data. Wait a few seconds and try to cut or copy again.";
+        blockName["AT194"] = "AT194";
+
+        blockInfo["AT203"] = "<b>Description:</b> This block is part of the horizontal geison block. It bears cuttings for the rafters of the roof on the upper surface, and sculptural decoration in the underside of it, including modilions and sculptural cassettes with floral decoration and exceptionally, a crab." + "<b>Placement:</b> Found in the southwest quadrant, about 12 m. from its place on the temple. It is restored as part of the horizontal geison course on the right flank of the temple, adjacent to AT204.";
+        blockName["AT203"] = "AT203";
+
+        blockInfo["AT258"] = "<b>Description:</b> This corinthian capital has bilateral symmetry on the diagonal axis, and thus it needs to be restored as a corner block at the top of a pilaster. The capital is broken at its lower part, but when restored, it bears similar carving to the column capital with three rows of acanthus leaves: two leaves on the bottom row, three on the middle and two on the top, from where two tendrils spring, one to the middle axis of each face and one to the corner of the bloc" + "<b>Placement:</b> It was found in the SE quadrant, close to the rear right corner of the building, and thus it is restored there.";
+        blockName["AT258"] = "AT258";
+
 
         switchCanvas.SetActive(false);
         infoCanvas.SetActive(false);
@@ -144,7 +159,8 @@ public class ObjectDetectionHandlerLegacy : MonoBehaviour
             {
                 objectNameText.text = blockInfo[behaviour.TargetName];
                 buttonText.text = blockName[behaviour.TargetName];
-                rawImage.texture = texture;
+                blockImageholder.texture = blockImage;
+                placementHolder.texture = placementImage;
             }
 
 

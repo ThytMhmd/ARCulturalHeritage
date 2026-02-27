@@ -221,8 +221,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &70874689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,8 +508,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 2800000, guid: 53dcbd5c80925264b8303799f8bf6c94, type: 3}
+  blockImageholder: {fileID: 1413170991}
+  blockImage: {fileID: 2800000, guid: 53dcbd5c80925264b8303799f8bf6c94, type: 3}
+  placementHolder: {fileID: 541229554}
+  placementImage: {fileID: 2800000, guid: 88afabf5120c0344dbfd8f2285b4690f, type: 3}
 --- !u!114 &182118545 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8617843609860165173, guid: 9761ca71849a4ff4b83b39a99de1b7a9, type: 3}
@@ -560,7 +564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -139, y: 279}
+  m_AnchoredPosition: {x: -139, y: 570}
   m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244636985
@@ -1064,13 +1068,13 @@ MonoBehaviour:
   infoCanvas: {fileID: 855103213}
   displayer: {fileID: 1054144019}
   tab: {fileID: 1312748074}
-  placePic: {fileID: 0}
+  placePic: {fileID: 1984860067}
   coverImage: {fileID: 2003999950}
   covertext: {fileID: 507520714}
-  coverPlace: {fileID: 0}
+  coverPlace: {fileID: 650742344}
   imageOutline: {fileID: 372216474}
   textOutline: {fileID: 1518409728}
-  placemtnOutline: {fileID: 0}
+  placemtnOutline: {fileID: 267085873}
 --- !u!4 &392029911
 Transform:
   m_ObjectHideFlags: 0
@@ -1309,8 +1313,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &417813789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,8 +1476,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 2800000, guid: 1450e68b569880e4aafaf2b6d4084939, type: 3}
+  blockImageholder: {fileID: 1413170991}
+  blockImage: {fileID: 2800000, guid: 1450e68b569880e4aafaf2b6d4084939, type: 3}
+  placementHolder: {fileID: 541229554}
+  placementImage: {fileID: 2800000, guid: 44f10800de10e6140a08a7cf74e28244, type: 3}
 --- !u!114 &453826674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,6 +1789,7 @@ GameObject:
   - component: {fileID: 541229553}
   - component: {fileID: 541229555}
   - component: {fileID: 541229554}
+  - component: {fileID: 541229556}
   m_Layer: 5
   m_Name: PlacementPic
   m_TagString: Untagged
@@ -1797,14 +1806,14 @@ RectTransform:
   m_GameObject: {fileID: 541229552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9.9109, y: 4.959626, z: 1}
+  m_LocalScale: {x: 10.703773, y: 5.1027036, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1984860068}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -705}
+  m_AnchoredPosition: {x: 0, y: -673}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541229554
@@ -1842,6 +1851,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541229552}
   m_CullTransparentMesh: 1
+--- !u!114 &541229556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541229552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.9686275, g: 0.4039216, b: 0.27450982, a: 0.5}
+  m_EffectDistance: {x: 1, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &650742342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,7 +1893,7 @@ RectTransform:
   m_GameObject: {fileID: 650742342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2182798, y: 0.17438321, z: 1}
+  m_LocalScale: {x: 3.217958, y: 0.36387712, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 855103214}
@@ -2045,8 +2069,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &750767240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2342,15 +2368,15 @@ RectTransform:
   m_Children:
   - {fileID: 529240564}
   - {fileID: 1518409724}
-  - {fileID: 507520713}
   - {fileID: 372216470}
-  - {fileID: 2003999949}
   - {fileID: 267085872}
-  - {fileID: 650742343}
   - {fileID: 1054144020}
-  - {fileID: 1312748075}
   - {fileID: 1984860068}
+  - {fileID: 1312748075}
   - {fileID: 842330448}
+  - {fileID: 507520713}
+  - {fileID: 2003999949}
+  - {fileID: 650742343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2602,8 +2628,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 2800000, guid: 2518a27301601fd4db21effa280d9cbb, type: 3}
+  blockImageholder: {fileID: 1413170991}
+  blockImage: {fileID: 2800000, guid: 2518a27301601fd4db21effa280d9cbb, type: 3}
+  placementHolder: {fileID: 541229554}
+  placementImage: {fileID: 2800000, guid: 16fc75bd0a6102b4897c0c5af2d416ca, type: 3}
 --- !u!1 &927131322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,8 +2993,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 2800000, guid: 9639655c0edbd9840b02cf9d98427fe0, type: 3}
+  blockImageholder: {fileID: 1413170991}
+  blockImage: {fileID: 2800000, guid: 2518a27301601fd4db21effa280d9cbb, type: 3}
+  placementHolder: {fileID: 541229554}
+  placementImage: {fileID: 0}
 --- !u!1 &1217464414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,8 +3033,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1217464416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3164,8 +3196,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1275894047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3401,10 +3435,10 @@ RectTransform:
   - {fileID: 1723199324}
   m_Father: {fileID: 855103214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -676}
-  m_SizeDelta: {x: 1080.9, y: 528.3651}
+  m_SizeDelta: {x: 76.900024, y: 528.3651}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1322778242
 PrefabInstance:
@@ -3579,8 +3613,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 2800000, guid: 3d1933f4c163251409449e46c3c77292, type: 3}
+  blockImageholder: {fileID: 1413170991}
+  blockImage: {fileID: 2800000, guid: 3d1933f4c163251409449e46c3c77292, type: 3}
+  placementHolder: {fileID: 541229554}
+  placementImage: {fileID: 2800000, guid: d74dd3652eff1c345894feeed45ad0eb, type: 3}
 --- !u!114 &1340515476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3794,10 +3830,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1054144020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -30}
-  m_SizeDelta: {x: 150, y: 150}
+  m_SizeDelta: {x: 50, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413170994
 MonoBehaviour:
@@ -3868,8 +3904,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1414251595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4011,8 +4049,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1433504432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4172,8 +4212,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1454395844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4482,8 +4524,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1568811243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4711,8 +4755,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1627239458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4729,8 +4775,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1627239459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4890,8 +4938,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1643976632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5304,8 +5354,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1823273657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5513,7 +5565,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 13
-    m_MaxSize: 60
+    m_MaxSize: 50
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -5689,8 +5741,10 @@ MonoBehaviour:
   buttonText: {fileID: 1675027245}
   infoCanvas: {fileID: 855103213}
   switchCanvas: {fileID: 529240560}
-  rawImage: {fileID: 1413170991}
-  texture: {fileID: 2800000, guid: d418a504e73999e47898de41265e6e44, type: 3}
+  blockImageholder: {fileID: 1413170991}
+  blockImage: {fileID: 2800000, guid: d418a504e73999e47898de41265e6e44, type: 3}
+  placementHolder: {fileID: 541229554}
+  placementImage: {fileID: 2800000, guid: 949937d1d3f558349b81899135a80835, type: 3}
 --- !u!1 &1967266938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,8 +5781,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1967266940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5875,7 +5931,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984860067}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5883,10 +5939,10 @@ RectTransform:
   - {fileID: 541229553}
   m_Father: {fileID: 855103214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: -904, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1998341851
 GameObject:
@@ -5924,8 +5980,10 @@ MonoBehaviour:
   buttonText: {fileID: 0}
   infoCanvas: {fileID: 0}
   switchCanvas: {fileID: 0}
-  rawImage: {fileID: 0}
-  texture: {fileID: 0}
+  blockImageholder: {fileID: 0}
+  blockImage: {fileID: 0}
+  placementHolder: {fileID: 0}
+  placementImage: {fileID: 0}
 --- !u!114 &1998341853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6076,14 +6134,14 @@ RectTransform:
   m_GameObject: {fileID: 2003999948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2182798, y: 0.17438321, z: 1}
+  m_LocalScale: {x: 3.2182798, y: 0.35536206, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 855103214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 492, y: -404}
+  m_AnchoredPosition: {x: 492, y: -408}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003999950
@@ -6180,11 +6238,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 13
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 13
-    m_MaxSize: 60
+    m_MinSize: 1
+    m_MaxSize: 30
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
