@@ -10,7 +10,6 @@ public class ButtonControl : MonoBehaviour
     public GameObject infoCanvas;
 
     public GameObject displayer;
-    public GameObject tab;
     public GameObject placePic;
 
     public RawImage coverImage;
@@ -45,7 +44,6 @@ public class ButtonControl : MonoBehaviour
         coverPlace.enabled = false;
         covertext.enabled = true;
 
-        tab.SetActive(true);
         objectNameText.gameObject.SetActive(true);
         displayer.SetActive(false);
         placePic.SetActive(false);
@@ -55,7 +53,6 @@ public class ButtonControl : MonoBehaviour
 
     public void showJustImages()
     {
-        tab.SetActive(false);
         objectNameText.gameObject.SetActive(false);
         placePic.SetActive(false);
         displayer.SetActive(true);
@@ -71,7 +68,7 @@ public class ButtonControl : MonoBehaviour
 
     public void showPlacement()
     {
-        tab.SetActive(false);
+        //tab.SetActive(false);
         objectNameText.gameObject.SetActive(false);
         displayer.SetActive(false);
         placePic.SetActive(true);
